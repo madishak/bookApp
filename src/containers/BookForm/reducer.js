@@ -8,14 +8,15 @@ import {
   const books = (state = {}, action) => {
     switch (action.type) {
       case BOOK_FETCH_REQUEST: {
-        const { book } = action;
-        console.log(book)
+        const { book, category, sorter } = action;
+        // console.log(book, category, sorter)
      
-        return { ...state, book };
+        // return { ...state, book, category, sorter };
+        return state
       }
       case BOOK_FETCH_SUCCESS: {
         const { books } = action;
-        console.log(books)
+        // console.log(books)
      
         return { ...state, books };
       }

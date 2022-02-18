@@ -5,9 +5,11 @@ import {
 } from "../../constants";
 
 
-export const bookFetchRequest = (book) => ({
+export const bookFetchRequest = (book, category, sorter) => ({
     type: BOOK_FETCH_REQUEST,
-    book
+    book,
+    category,
+    sorter,
 })
 
 export const bookFetchSuccess = (books) => ({
