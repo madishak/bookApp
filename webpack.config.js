@@ -17,8 +17,7 @@ module.exports = {
       title: "Madina Karachai - BooksApp",
       link: {
         rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap",
+        href: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap",
       },
       favicon: "open-book.ico",
       template: path.resolve(__dirname, "./index.html"),
@@ -29,8 +28,9 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   devServer: {
+    historyApiFallback: true,
     static: {
-      directory: path.join(__dirname, 'public'),
+      directory: path.join(__dirname, "public"),
     },
     compress: true,
     port: 9000,
