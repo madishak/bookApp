@@ -14,7 +14,7 @@ function* sendBook(request) {
       axios.get,
       `https://www.googleapis.com/books/v1/volumes?q=${request.book}+subject:${
         request.category !== "all" ? request.category : ""
-      }&orderBy=${request.sorter}&key=AIzaSyDVdec1OaKPW78OEofjzwbVhtI24ThdTDg`
+      }&orderBy=${request.sorter}&maxResults=40&key=AIzaSyDVdec1OaKPW78OEofjzwbVhtI24ThdTDg`
     );
     // console.log(response.data.items);
     const books = yield response.data.items;
