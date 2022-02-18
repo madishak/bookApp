@@ -53,10 +53,10 @@ const mapStateToProps = (state) => ({
 const BookCardView = (props) => {
   const classes = useStyles();
   const [{ volumeInfo }] = props.book;
-  console.log(volumeInfo);
+  
   return (
     <div>
-      <Link className={classes.backButton} to="/">Books list</Link>
+      <Link className={classes.backButton} to="/">Back to book list</Link>
       {!volumeInfo.length ? (
         <div className={classes.wrapper}>
           <img className={classes.image}
